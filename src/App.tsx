@@ -1,11 +1,15 @@
-import React from 'react';
-import ShoppingApp from './components/ShoppingApp';
-import "./styles.scss"
+import React from "react";
+import "./styles.scss";
+import Content from "./components/Content";
 
-const App:React.FC=()=> {
+const App = () => {
   return (
-    <ShoppingApp/>
+    <div className="app-wrap">
+      <div className="app-content">
+        <Content />
+      </div>
+    </div>
   );
-}
+};
 
 export default App;

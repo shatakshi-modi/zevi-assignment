@@ -1,0 +1,20 @@
+$image-url: "https://s3-alpha-sig.figma.com/img/0106/3d18/863e50cc601d1e4790f6a190df701d4b?Expires=1700438400&Signature=HSD3pVxbhgEJlP15MR3xu49QKiGtHFgOqhsg9VACsAkE8Utm~j5g1rjPRbv8qoyb8nqoR2aaDYrytSLbR7CkruhuC~vtDfKOg6WefuQF~yAnQ31UPs6EybcGkDiDXbP8jU9K-6qvatC3KmsKdxt233LmIHa6KpA7pygc8~DoSLPa4tCNCUaQqzQTCaD-rzYxll5qIM8lUlaoI~Mjg2fA5xlwLZ-9-1YWnPLRmG8FcF00PIRmlEDk2RoDYWF0yUrydlCm2hWufys5e7cyAX5OBNIjYIzgY4GxYBq~-DpvqEg0nFnLRQKL0GEMCmzGBfZNJTofjmG2xUa1aBB6NNJ6Pg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
+
+.app-wrap {
+  position: relative;
+  &:before {
+    content: "";
+    background-image: url(#{$image-url});
+    display: block;
+    position: absolute;
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-position: 0 40%;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.app-content {
+  position: relative;
+}

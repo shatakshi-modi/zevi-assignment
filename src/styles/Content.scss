@@ -1,0 +1,16 @@
+.content-wrap {
+  padding: 1rem;
+  .navbar-logo {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      width: 5vw;
+      height: 5vh;
+    }
+  }
+  .search-menu-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+}
