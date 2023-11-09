@@ -22,7 +22,8 @@ $search-input-small-border-radius: 10px;
   height: $search-input-small-height;
   padding: $search-input-small-padding;
   border-radius: $search-input-small-border-radius;
-  /* Add any other small styles you need */
+  border: 1px solid #ccc;
+  outline: none;
 }
 
 .search-input {
