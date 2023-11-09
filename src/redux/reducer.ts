@@ -1,11 +1,11 @@
-import { GET_SEARCH_INPUT, SET_DATA } from "./constant";
+import { GET_SEARCH_INPUT, SET_DATA, SET_SEARCH } from "./constant";
 interface Action {
   type: string;
   payload?: any;
 }
 
 export const ShoppingRedux = (
-  state = { loading: false, search: "", data: [] },
+  state = { loading: false, search: "", data: [], searchValue: "" },
   action: Action
 ) => {
   switch (action.type) {
@@ -19,6 +19,12 @@ export const ShoppingRedux = (
         ...state,
         data: action.payload,
       };
+    case SET_SEARCH:
+      return {
+        ...state,
+        searchValue: action.payload,
+      };
+
     default:
       return state;
   }

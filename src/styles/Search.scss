@@ -1,3 +1,8 @@
+$search-input-small-font-size: 14px;
+$search-input-small-width: 40vw;
+$search-input-small-height: 4vh;
+$search-input-small-padding: 10px;
+$search-input-small-border-radius: 10px;
 .search-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +16,15 @@
   align-self: center;
 }
 
+.search-input-small {
+  font-size: $search-input-small-font-size;
+  width: $search-input-small-width;
+  height: $search-input-small-height;
+  padding: $search-input-small-padding;
+  border-radius: $search-input-small-border-radius;
+  /* Add any other small styles you need */
+}
+
 .search-input {
   font-size: x-large;
   width: 57vw;
@@ -22,6 +36,7 @@
 }
 
 .search-icon {
+  cursor: pointer;
   transform: translateX(-120%);
   background: none;
   border: none;

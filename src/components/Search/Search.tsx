@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
-import SearchInput from "./SearchInput";
 import SearchMenu from "./SearchMenu";
 import { generateFakeData } from "../utils";
 import { useDispatch, useSelector } from "react-redux";
-import { setData } from "../../redux/actionCreator";
+import { setData, setSearchValue } from "../../redux/actionCreator";
 import { RootState } from "../../redux/reducer";
+import SearchInput from "../DesignSystem/SearchInput";
 
 const Search = () => {
   const dispatch = useDispatch();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { data } = useSelector((state: RootState) => state);
-  const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null);
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -45,7 +44,7 @@ const Search = () => {
   };
 
   const handleMenuItemClick = (menuItem: string) => {
-    setSelectedMenuItem(menuItem);
+    dispatch(setSearchValue(menuItem));
     handleMenuClose();
   };
 
