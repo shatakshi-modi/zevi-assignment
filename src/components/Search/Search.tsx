@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import SearchInput from "./SearchInput";
 import SearchMenu from "./SearchMenu";
+import { generateFakeData } from "../utils";
+import { useDispatch, useSelector } from "react-redux";
+import { setData } from "../../redux/actionCreator";
+import { RootState } from "../../redux/reducer";
 
 const Search = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const dispatch = useDispatch();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
+  const { data } = useSelector((state: RootState) => state);
   const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null);
 
   useEffect(() => {
@@ -23,6 +28,13 @@ const Search = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!data.length) {
+      const data = generateFakeData(1000);
+      dispatch(setData(data));
+    }
+  }, []);
 
   const handleInputClick = () => {
     setIsMenuOpen(true);

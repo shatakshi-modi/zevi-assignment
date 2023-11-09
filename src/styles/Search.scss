@@ -30,7 +30,7 @@
 .menu-container {
   align-self: center;
   background-color: #fff;
-  height: 70vh;
+  height: fit-content;
   width: 65vw;
   border-radius: 4px;
   z-index: 1000;
@@ -59,7 +59,7 @@
 .menu-items {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: nowrap;
 }
 
