@@ -22,8 +22,6 @@ const SearchMenu = ({ onItemClick }: Props) => {
       search == "" ? true : e.caption.includes(search)
     );
 
-  console.log(menuData);
-
   if (latestData.length > 0 || popularSuggestionData.length > 0) {
     return (
       <div className="menu-container">

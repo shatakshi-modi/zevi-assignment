@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { DataInterface, renderStars } from "../utils";
 
 const ProductCard = ({
@@ -9,8 +11,27 @@ const ProductCard = ({
   starRating,
   brand,
 }: DataInterface) => {
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+  };
+
   return (
     <div className="product-card-container">
+      {isLiked ? (
+        <FontAwesomeIcon
+          icon={faHeart}
+          className="heart-icon liked"
+          onClick={handleLikeClick}
+        />
+      ) : (
+        <FontAwesomeIcon
+          icon={faHeart}
+          className="heart-icon"
+          onClick={handleLikeClick}
+        />
+      )}
       <img src={imageUrl} alt={caption} />
       <figcaption>{caption}</figcaption>
       <div className="price">

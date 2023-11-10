@@ -5,9 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { setData, setSearchValue } from "../../redux/actionCreator";
 import { RootState } from "../../redux/reducer";
 import SearchInput from "../DesignSystem/SearchInput";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { data } = useSelector((state: RootState) => state);
@@ -44,6 +46,7 @@ const Search = () => {
   };
 
   const handleMenuItemClick = (menuItem: string) => {
+    navigate("/search");
     dispatch(setSearchValue(menuItem));
     handleMenuClose();
   };

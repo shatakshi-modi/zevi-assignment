@@ -26,7 +26,7 @@ export const renderStars = (starRating: number) => {
             icon={faStar}
             size="2xs"
             style={{ color: "#ffd700" }}
-          />
+          />{" "}
         </span>
       );
     } else {
@@ -36,7 +36,7 @@ export const renderStars = (starRating: number) => {
             icon={faStar}
             size="2xs"
             style={{ color: "#CDCCC8" }}
-          />
+          />{" "}
         </span>
       );
     }
