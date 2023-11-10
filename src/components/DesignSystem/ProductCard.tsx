@@ -1,5 +1,7 @@
 import React from "react";
 import { DataInterface } from "../utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const ProductCard = ({
   caption,
@@ -13,16 +15,32 @@ const ProductCard = ({
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= starRating) {
-        stars.push(<span key={i}>&#9733;</span>);
+        stars.push(
+          <span key={i}>
+            <FontAwesomeIcon
+              icon={faStar}
+              size="2xs"
+              style={{ color: "#ffd700" }}
+            />
+          </span>
+        );
       } else {
-        stars.push(<span key={i}>&#9734;</span>);
+        stars.push(
+          <span key={i}>
+            <FontAwesomeIcon
+              icon={faStar}
+              size="2xs"
+              style={{ color: "#000000" }}
+            />
+          </span>
+        );
       }
     }
     return stars;
   };
 
   return (
-    <div className="latest-trend-card">
+    <div className="product-card-container">
       <img src={imageUrl} alt={caption} />
       <figcaption>{caption}</figcaption>
       <div className="price">

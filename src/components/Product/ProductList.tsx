@@ -15,7 +15,7 @@ const ProductList = (props: Props) => {
   } = useSelector((state: RootState) => state);
 
   return (
-    <div>
+    <div className="product-grid-list">
       {menuData
         .filter(
           (e: DataInterface) =>

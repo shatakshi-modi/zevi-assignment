@@ -22,7 +22,7 @@
   }
   .product-result {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
     grid-gap: 0.5rem;
   }
 }
@@ -56,4 +56,29 @@
 
 .rating {
   font-size: 24px;
+}
+.product-grid-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y: auto;
+  max-height: 500px;
+}
+.product-grid-list {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.product-grid-list::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.product-card-container {
+  width: fit-content;
+  img {
+    width: 10vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+  figcaption {
+    text-align: left;
+    padding-top: 0.25rem;
+  }
 }
