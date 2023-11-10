@@ -1,12 +1,20 @@
 import React from "react";
 import Accordian from "../DesignSystem/Accordian";
+import { AccordianItem, acc } from "../utils";
 
-type Props = {};
-
-const Filter = (props: Props) => {
+const Filter = () => {
+  const item = acc as AccordianItem[];
   return (
     <div>
-      <Accordian />
+      {acc.map(
+        (item: {
+          name: string;
+          key: string;
+          options: { name: string | JSX.Element[]; key: string }[];
+        }) => (
+          <Accordian accordianData={item} />
+        )
+      )}
     </div>
   );
 };
