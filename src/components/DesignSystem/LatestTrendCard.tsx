@@ -8,7 +8,7 @@ interface LatestTrendCard {
 const LatestTrendCard = ({ imageUrl, caption }: LatestTrendCard) => {
   return (
     <div className="lastest-trend-container">
-      <img src={imageUrl} />
+      <img src={imageUrl} alt={caption} />
       <figcaption>{caption}</figcaption>
     </div>
   );

@@ -23,7 +23,7 @@ const SearchInput = ({ onInputClick, size = "normal" }: Props) => {
     navigate("/search");
   };
   const inputClassName =
-    size == "small" ? "search-input-small" : "search-input";
+    size === "small" ? "search-input-small" : "search-input";
 
   return (
     <div className="search-input-container">
