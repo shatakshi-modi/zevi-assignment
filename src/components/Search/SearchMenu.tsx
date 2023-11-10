@@ -1,4 +1,4 @@
-import React, { LegacyRef } from "react";
+import React from "react";
 import LatestTrendCard from "../DesignSystem/LatestTrendCard";
 import { RootState } from "../../redux/reducer";
 import { useSelector } from "react-redux";
@@ -14,12 +14,12 @@ const SearchMenu = ({ onItemClick }: Props) => {
   const latestData = menuData
     .slice(0, 5)
     .filter((e: DataInterface) =>
-      search == "" ? true : e.caption.includes(search)
+      search === "" ? true : e.caption.includes(search)
     );
   const popularSuggestionData = menuData
     .slice(-5)
     .filter((e: DataInterface) =>
-      search == "" ? true : e.caption.includes(search)
+      search === "" ? true : e.caption.includes(search)
     );
 
   if (latestData.length > 0 || popularSuggestionData.length > 0) {
