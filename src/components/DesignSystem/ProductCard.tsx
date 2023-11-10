@@ -30,7 +30,7 @@ const ProductCard = ({
             <FontAwesomeIcon
               icon={faStar}
               size="2xs"
-              style={{ color: "#000000" }}
+              style={{ color: "#CDCCC8" }}
             />
           </span>
         );

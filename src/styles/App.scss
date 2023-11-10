@@ -18,3 +18,40 @@ $image-url: "https://s3-alpha-sig.figma.com/img/0106/3d18/863e50cc601d1e4790f6a1
 .app-content {
   position: relative;
 }
+
+.accordian-container {
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .name-container {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .name-icon-container {
+    display: flex;
+    justify-content: space-between;
+    button {
+      border: 0;
+      outline: 0;
+      background: none;
+    }
+  }
+
+  .checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    padding-left: 0;
+    input[type="checkbox"] {
+      width: 2vw;
+    }
+  }
+}

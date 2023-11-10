@@ -14,6 +14,17 @@ export const generateFakeData = (count: number) => {
   return fakeData;
 };
 
+export const acc = {
+  name: "Brand",
+  key: "brand",
+  options: [
+    "Kemmer, Bashirian and Quitzon",
+    "Rohan Inc",
+    "Hyatt Group",
+    "Gislason - Bernier",
+  ],
+};
+
 export interface DataInterface {
   caption: string;
   imageUrl: string;

@@ -23,6 +23,7 @@
   .product-result {
     display: grid;
     grid-template-columns: 30% 70%;
+
     grid-gap: 0.5rem;
   }
 }
@@ -59,6 +60,7 @@
 }
 .product-grid-list {
   display: grid;
+  padding: 2rem;
   grid-template-columns: repeat(4, 1fr);
   overflow-y: auto;
   max-height: 500px;
