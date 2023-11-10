@@ -37,8 +37,6 @@
 .product-title {
   color: #000;
   font-family: "Inter", sans-serif;
-
-  font-size: 0.5em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -48,7 +46,6 @@
   display: flex;
   justify-content: flex-start;
   row-gap: 20px;
-  font-size: 0.5em;
 
   color: #555;
 }
@@ -59,7 +56,7 @@
 
   font-family: "Inter", sans-serif;
 
-  font-size: 2em;
+  font-size: 1em;
 
   font-style: normal;
   font-weight: 300;
@@ -71,7 +68,7 @@
   color: #6d84ff;
   font-family: "Inter", sans-serif;
 
-  font-size: 2em;
+  font-size: 1em;
 
   font-style: normal;
   font-weight: 600;
@@ -87,15 +84,17 @@
   grid-template-columns: repeat(4, 1fr);
   overflow-y: auto;
   max-height: 500px;
+  grid-column-gap: 50px;
 }
 .product-grid-list {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .product-grid-list::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
 }
 .product-card-container {
+  padding-bottom: 0.5em;
   width: 10vw;
   position: relative;
 
@@ -120,5 +119,29 @@
   figcaption {
     text-align: left;
     padding-top: 0.25rem;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+}
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data-text {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  .rating-count {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+    align-self: center;
+    font-style: normal;
   }
 }

@@ -10,6 +10,7 @@ const ProductCard = ({
   newPrice,
   starRating,
   brand,
+  count,
 }: DataInterface) => {
   const [isLiked, setIsLiked] = useState(false);
 
@@ -38,7 +39,10 @@ const ProductCard = ({
         <span className="old-price">{`$${oldPrice}`}</span>
         <span className="new-price">{`$${newPrice}`}</span>
       </div>
-      <div className="rating">{renderStars(Number(starRating))}</div>
+      <div className="rating-container">
+        <div className="rating">{renderStars(Number(starRating))}</div>
+        <div className="rating-count">({count})</div>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,13 @@ import { faker } from "@faker-js/faker";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
+const brandValues = [
+  "Kemmer, Bashirian and Quitzon",
+  "Rohan Inc",
+  "Hyatt Group",
+  "Gislason - Bernier",
+];
+
 export const generateFakeData = (count: number) => {
   const fakeData = [];
   for (let i = 0; i < count; i++) {
@@ -10,8 +17,18 @@ export const generateFakeData = (count: number) => {
     const oldPrice = faker.number.int({ min: 100, max: 5000 });
     const newPrice = faker.number.int({ min: 100, max: 5000 });
     const starRating = faker.number.int({ min: 1, max: 5 }).toString();
-    const brand = faker.company.name();
-    fakeData.push({ imageUrl, caption, oldPrice, newPrice, starRating, brand });
+    const brand = brandValues[faker.number.int({ min: 0, max: 3 })];
+    const count = faker.number.int({ min: 5, max: 200 });
+
+    fakeData.push({
+      imageUrl,
+      caption,
+      oldPrice,
+      newPrice,
+      starRating,
+      brand,
+      count,
+    });
   }
   return fakeData;
 };
@@ -104,6 +121,7 @@ export interface DataInterface {
   newPrice: number;
   starRating: string;
   brand: string;
+  count?: number;
 }
 
 export interface AccordianItem {

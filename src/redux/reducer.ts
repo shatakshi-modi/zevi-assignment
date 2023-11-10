@@ -10,7 +10,7 @@ export const ShoppingRedux = (
     search: "",
     data: [],
     searchValue: "",
-    filter: { brand: [], rating: [] },
+    filter: { brand: [], rating: [], price: [] },
   },
   action: Action
 ) => {

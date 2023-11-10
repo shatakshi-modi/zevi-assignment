@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 import { DataInterface } from "../utils";
 import ProductCard from "../DesignSystem/ProductCard";
 
-type Props = {};
-
-const ProductList = (props: Props) => {
+const ProductList = () => {
   const {
     search,
     data: menuData,
@@ -48,13 +46,21 @@ const ProductList = (props: Props) => {
     );
   });
 
-  return (
-    <div className="product-grid-list">
-      {menuFilteredData.map((e: DataInterface) => (
-        <ProductCard {...e} />
-      ))}
-    </div>
-  );
+  if (menuFilteredData.length) {
+    return (
+      <div className="product-grid-list">
+        {menuFilteredData.map((e: DataInterface) => (
+          <ProductCard {...e} />
+        ))}
+      </div>
+    );
+  } else {
+    return (
+      <div className="no-data-container">
+        <div className="no-data-text">No Data</div>
+      </div>
+    );
+  }
 };
 
 export default ProductList;
